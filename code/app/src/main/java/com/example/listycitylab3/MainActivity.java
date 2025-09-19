@@ -51,7 +51,6 @@ public class MainActivity extends AppCompatActivity implements AddCityFragment.A
         cityList.setOnItemClickListener((parent, view, position, id) -> {
             editingPosition = position;
             City cityToEdit = dataList.get(position);
-
             EditCityFragment editFragment = new EditCityFragment(cityToEdit, this::editCity);
             editFragment.show(getSupportFragmentManager(), "Edit City");
         });

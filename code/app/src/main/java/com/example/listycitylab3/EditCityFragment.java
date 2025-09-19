@@ -31,8 +31,8 @@ public class EditCityFragment extends DialogFragment {
         View view = LayoutInflater.from(getContext()).inflate(R.layout.fragment_add_city, null);
         EditText editCityName = view.findViewById(R.id.edit_text_city_text);
         EditText editProvinceName = view.findViewById(R.id.edit_text_province_text);
-
-        return new AlertDialog.Builder(getContext())
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        return builder
                 .setView(view)
                 .setTitle("Edit city")
                 .setNegativeButton("Cancel", null)
